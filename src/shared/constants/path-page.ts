@@ -1,5 +1,6 @@
 export enum PathPage {
+  MAIN = '/',
   LOGIN = '/login',
-  PRODUCTS = '/',
-  FORBIDDEN = '/FORBIDDEN'
+  PRODUCTS = '/products',
+  FORBIDDEN = '/forbidden'
 }
