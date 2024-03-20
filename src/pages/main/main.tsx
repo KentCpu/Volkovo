@@ -1,8 +1,3 @@
-
 export const Main = () => {
-  return (
-      <div>
-        Главная
-      </div>
-  );
+  return <div>Главная</div>;
 };

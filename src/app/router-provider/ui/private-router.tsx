@@ -1,7 +1,8 @@
-import { ReactNode} from 'react';
-import {Navigate, useLocation, useNavigate} from 'react-router-dom';
-import {Role} from "../../../shared/constants/roles";
-import {PathPage} from "../../../shared/constants/path-page";
+import { ReactNode } from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
+import { Role } from '../../../shared/constants/roles';
+import { PathPage } from '../../../shared/constants/path-page';
+import { useUser } from '../../../entities/user';
 
 interface PrivateRouterProps {
   children: ReactNode;
@@ -9,12 +10,14 @@ interface PrivateRouterProps {
 }
 
 export const PrivateRouter = ({ roles, children }: PrivateRouterProps) => {
-  const userRole = Role.VIEWER;
+  const userContext = useUser();
+  const userRole = userContext?.user?.role ?? Role.VIEWER;
+  const isInitUser = userContext?.isInit;
   const location = useLocation();
 
-  if (!roles.includes(userRole)) {
+  if (isInitUser && !roles.includes(userRole)) {
     return (
-        <Navigate to={PathPage.FORBIDDEN} state={{ from: location }} />
+      <Navigate to={PathPage.FORBIDDEN} state={{ from: location }} replace />
     );
   }
 
