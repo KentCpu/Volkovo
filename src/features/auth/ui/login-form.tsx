@@ -8,7 +8,7 @@ export interface LoginFormData {
 }
 
 export const LoginForm = () => {
-  const { control, reset, handleSubmit } = useForm<LoginFormData>({
+  const { control, handleSubmit } = useForm<LoginFormData>({
     defaultValues: {
       email: '',
       password: '',

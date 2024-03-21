@@ -5,6 +5,7 @@ import './app/index.css';
 import App from './app/App';
 import { RouterProvider } from './app/router-provider/ui/router-provider';
 import { UserProvider } from './entities/user';
+import { ProductProvider } from './entities/product';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -12,8 +13,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <UserProvider>
-      <RouterProvider />
-      <App />
+      <ProductProvider>
+        <RouterProvider />
+        <App />
+      </ProductProvider>
     </UserProvider>
   </React.StrictMode>,
 );

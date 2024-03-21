@@ -1,3 +1,5 @@
+import { CreateProductButton } from '../../features/product/create/ui/create-product-button';
+
 export const Products = () => {
-  return <div>fefe</div>;
+  return <CreateProductButton />;
 };
