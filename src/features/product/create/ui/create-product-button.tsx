@@ -10,7 +10,7 @@ export const CreateProductButton = () => {
 
   return (
     <>
-      <Button onClick={onOpen}>Создать товар</Button>
+      <Button onClick={onOpen}>Добавить товар</Button>
       <CreateProductModal isOpen={isOpen} onClose={onClose} />
     </>
   );

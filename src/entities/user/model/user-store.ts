@@ -2,9 +2,10 @@ import { createContext } from 'react';
 import { User } from './user';
 
 interface UserContextType {
-  user?: User | null;
-  setUser?: (user: User) => void;
+  user: User | null;
+  setUser: (user: User) => void;
+  signOut: () => void;
   isInit: boolean;
 }
 
-export const UserContext = createContext<UserContextType>({ isInit: false });
+export const UserContext = createContext<UserContextType | null>(null);

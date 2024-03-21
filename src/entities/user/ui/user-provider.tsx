@@ -15,11 +15,17 @@ export const UserProvider = ({ children }: PropsWithChildren) => {
     setIsInit(true);
   }, []);
 
+  const signOut = () => {
+    localStorage.removeItem(LOCAL_STORAGE_USER_KEY);
+    setUser(null);
+  };
+
   const defaultValue = useMemo(
     () => ({
       user,
       setUser,
       isInit,
+      signOut,
     }),
     [user, isInit],
   );

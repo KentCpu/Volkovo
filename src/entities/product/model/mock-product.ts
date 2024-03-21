@@ -55,16 +55,4 @@ export const mockProduct: Product[] = [
     article: 'f-207',
     categoryId: 3,
   },
-  {
-    id: 10,
-    title: 'Шашлык',
-    article: 'f-207',
-    categoryId: 3,
-  },
-  {
-    id: 11,
-    title: 'Шашлык',
-    article: 'f-207',
-    categoryId: 3,
-  },
 ];
