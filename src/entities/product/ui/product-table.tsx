@@ -25,7 +25,11 @@ export const ProductTable = ({ productActions }: ProductTableProps) => {
     { field: 'id', headerName: 'ID', width: 70 },
     { field: 'category', headerName: 'Категория', width: 130 },
     { field: 'title', headerName: 'Название товара', flex: 1 },
-    { field: 'weight', headerName: 'Количество или вес', flex: 1 },
+    {
+      field: 'weight',
+      headerName: 'Количество или вес приготовленного товара',
+      flex: 1,
+    },
     {
       field: 'remains',
       headerName: 'Остатки',

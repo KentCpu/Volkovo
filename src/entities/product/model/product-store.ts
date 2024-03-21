@@ -5,7 +5,7 @@ interface ProductContextType {
   products: ProductStatistics[];
   createProduct: (product: ProductStatistics) => void;
   deleteProduct: (id: number) => void;
-  editProduct: (product: ProductStatistics) => void;
+  editProduct: (id: number, sales: number, remains: string) => void;
 }
 
 export const ProductContext = createContext<ProductContextType | null>(null);

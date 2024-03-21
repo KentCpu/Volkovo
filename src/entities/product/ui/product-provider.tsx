@@ -17,7 +17,17 @@ export const ProductProvider = ({ children }: PropsWithChildren) => {
     );
   };
 
-  const editProduct = (product: ProductStatistics) => {};
+  const editProduct = (id: number, sales: number, remains: string) => {
+    setProducts((prevProducts) =>
+      prevProducts.map((product) => {
+        return {
+          ...product,
+          sales,
+          remains,
+        };
+      }),
+    );
+  };
 
   return (
     <ProductContext.Provider

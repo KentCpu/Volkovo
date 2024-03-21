@@ -2,6 +2,7 @@ import { CreateProductButton } from '../../features/product/create/ui/create-pro
 import { Container } from '@mui/material';
 import { ProductTable } from '../../entities/product';
 import { DeleteProductButton } from '../../features/product/delete';
+import { EditProductButton } from '../../features/product/edit';
 
 export const Products = () => {
   return (
@@ -12,6 +13,7 @@ export const Products = () => {
           return (
             <>
               <DeleteProductButton id={id} />
+              <EditProductButton id={id} />
             </>
           );
         }}
