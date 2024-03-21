@@ -3,19 +3,19 @@ import { Box, Button, Stack, TextField, Typography } from '@mui/material';
 import { useLogin } from '../model/use-login';
 
 export interface LoginFormData {
-  email: string;
+  login: string;
   password: string;
 }
 
 export const LoginForm = () => {
   const { control, handleSubmit } = useForm<LoginFormData>({
     defaultValues: {
-      email: '',
+      login: '',
       password: '',
     },
   });
 
-  const { isLoading, handleLogin } = useLogin();
+  const handleLogin = useLogin();
 
   return (
     <Box
@@ -35,11 +35,11 @@ export const LoginForm = () => {
         <Stack spacing={3}>
           <Controller
             control={control}
-            name="email"
+            name="login"
             rules={{ required: 'Обязательное поле' }}
             render={({ field, fieldState }) => (
               <TextField
-                placeholder="Электронная почта"
+                placeholder="Логин"
                 {...field}
                 error={!!fieldState.error?.message}
                 helperText={fieldState.error?.message}
@@ -59,7 +59,7 @@ export const LoginForm = () => {
               />
             )}
           />
-          <Button disabled={isLoading} type="submit" variant="contained">
+          <Button type="submit" variant="contained">
             Войти
           </Button>
         </Stack>

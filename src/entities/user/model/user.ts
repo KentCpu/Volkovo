@@ -1,6 +1,6 @@
 import { Role } from '../../../shared/constants/roles';
 
 export interface User {
-  email: string;
+  login: string;
   role: Role;
 }

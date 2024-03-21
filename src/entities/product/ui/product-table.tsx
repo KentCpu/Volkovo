@@ -51,5 +51,6 @@ export const ProductTable = ({ productActions }: ProductTableProps) => {
     },
   ];
 
+  if (!product?.length) return null;
   return <DataGrid rows={product ?? []} columns={columns} />;
 };
