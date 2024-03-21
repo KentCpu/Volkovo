@@ -1,8 +1,6 @@
 import { PropsWithChildren, useEffect, useMemo, useState } from 'react';
 import { UserContext } from '../model/user-store';
 import { User } from '../model/user';
-import { useNavigate } from 'react-router-dom';
-import { PathPage } from '../../../shared/constants/path-page';
 
 export const LOCAL_STORAGE_USER_KEY = 'user';
 export const UserProvider = ({ children }: PropsWithChildren) => {

@@ -1,4 +1,4 @@
-import { AppBar, Box, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, Toolbar } from '@mui/material';
 import { SignOutButton } from '../../features/auth';
 import { UserAccount } from '../../entities/user';
 
