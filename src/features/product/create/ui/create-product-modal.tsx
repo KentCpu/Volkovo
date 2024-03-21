@@ -13,7 +13,6 @@ import {
   getProductsByCategory,
   Product,
   ProductSelect,
-  useProduct,
 } from '../../../../entities/product';
 import { CategorySelect } from '../../../../entities/category';
 import { mockCategory } from '../../../../entities/category/model/mock-category';
